@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="./react.min.js"></script>
+        <script src="./react-dom.min.js"></script>
+        <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+        <script src="./components.min.js"></script>
+    </head>
+    <body>
+        <h2>Unit Allocation</h2>
+        <div id="allocate">
+            <input class="slider" type="range" min="0" max="100" value=26 step="1" />
+        </div>
+    </body>
+    <script type="text/javascript">
+        ReactDOM.render(React.createElement(UnitAllocate,null),document.getElementById("allocate"));
+    </script>
+</html>
