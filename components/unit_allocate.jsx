@@ -74,13 +74,25 @@ var UnitAllocate = React.createClass({
 
   render: function(){
     return (
-      <div>
-        <div>Current Assigned : {this.state.total}</div>
+      <table>
+        <tr>
+            <th>Name</th>
+            <th>Students</th>
+            <th></th>
+            <th>Assigned</th>
+        </tr>
         <Slider label="Teacher One" name="teacher1" update={this.updateUnits} required={this.state.teacher1Used} min="0" max="100" value={this.state.teacher1Value} />
         <Slider label="Teacher Two" name="teacher2" update={this.updateUnits} required={this.state.teacher2Used} min="0" max="100" value={this.state.teacher2Value} />
         <Slider label="Teacher Three" name="teacher3" update={this.updateUnits} required={this.state.teacher3Used} min="0" max="100" value={this.state.teacher3Value} />
-        <div>{this.state.message}</div>
-      </div>
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td>{this.state.total}</td>
+        </tr>
+      </table>
     )
   }
 });
+//<div className="total">{this.state.total}</div>
+//<div>{this.state.message}</div>
